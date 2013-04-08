@@ -55,6 +55,10 @@
  			puts("Name of sentence")
  			sentence_name = gets().chomp()
  			# give nice error message if we don't know about the sentence
+ 			unless Sentence.exist?(sentence_name)
+ 				abort("Sentence '#{sentence_name}' does not exist, sorry!")
+ 			end
+ 		
  			# display sentence in some format to user
 
  		elsif answer == "l"
