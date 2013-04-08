@@ -58,8 +58,8 @@
  			unless Sentence.exist?(sentence_name)
  				abort("Sentence '#{sentence_name}' does not exist, sorry!")
  			end
- 		
  			# display sentence in some format to user
+ 			puts (sentence_name)
 
  		elsif answer == "l"
 
