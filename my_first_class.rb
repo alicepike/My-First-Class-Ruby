@@ -34,13 +34,13 @@
  		@io.puts("Welcome to sentence store v1")
  		@io.puts("Do you want to (s) store a sentence (r) retrieve a sentence?:")
 
- 		answer = gets()
+ 		answer = gets().chomp().downcase()
 
  		if answer == "s"
  			puts("Name of sentence")
 			sentence_name = gets().chomp()
 
-			puts = "Content of sentence"
+			puts("Content of sentence")
 			sentence_content = gets().chomp()
 
 			sentence = Sentence.new(sentence_name,sentence_content)
@@ -55,11 +55,11 @@
  			puts("Name of sentence")
  			sentence_name = gets().chomp()
  			# give nice error message if we don't know about the sentence
- 			unless Sentence.exist?(sentence_name)
+ 			unless Sentence.retrieve(sentence_name)
  				abort("Sentence '#{sentence_name}' does not exist, sorry!")
  			end
  			# display sentence in some format to user
- 			puts (sentence_name)
+ 			puts ("Your sentence is #{sentence_content}")
 
  		elsif answer == "l"
 
