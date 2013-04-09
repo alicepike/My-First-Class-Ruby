@@ -64,7 +64,10 @@
  		elsif answer == "l"
 
  			# list all sentences present
+ 			puts ("Content of sentence")
+ 			sentence_content = gets().chomp()
  			# or tell user if there are none
+ 			unless Sentence.retrieve(sentence_content)
 
  		else 
  			@io.puts("Sorry I have no idea how to #{answer} a sentence")
