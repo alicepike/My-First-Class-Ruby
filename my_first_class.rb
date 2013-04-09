@@ -71,7 +71,8 @@
 
  			puts("#{sentence.name()}")
  			# or tell user if there are none
- 			unless Sentence.retrieve(sentence_content)
+ 			unless sentence_content == nil
+ 				abort ("No sentences exist, sorry!")
  			end
 
  		else 
