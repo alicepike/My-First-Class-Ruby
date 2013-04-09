@@ -66,6 +66,10 @@
  			# list all sentences present
  			puts ("Content of sentence")
  			sentence_content = gets().chomp()
+
+ 			@store.add(sentence)
+
+ 			puts("#{sentence.name()}")
  			# or tell user if there are none
  			unless Sentence.retrieve(sentence_content)
 
