@@ -72,6 +72,7 @@
  			puts("#{sentence.name()}")
  			# or tell user if there are none
  			unless Sentence.retrieve(sentence_content)
+ 			end
 
  		else 
  			@io.puts("Sorry I have no idea how to #{answer} a sentence")
