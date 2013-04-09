@@ -64,18 +64,22 @@
  		elsif answer == "l"
 
  			# list all sentences present
- 			sentence.each do |sentence_content|
- 				puts ("Content of sentence")
-	 			sentence_content = gets().chomp()
+ 			class Sentence 
+ 				def initialise(name,content)
+ 					@name = name
+ 					@content = content
+ 				end
 
-	 			@store.add(sentence)
-
-	 			puts("#{sentence.name()}")
- 			end 
- 			
+ 				def name
+ 					@name
+ 				end
+ 				
+ 				def content
+ 					@content
+ 				end
+ 			end
  			# or tell user if there are none
- 			unless sentence_content == nil
- 				abort ("No sentences exist, sorry!")
+ 			unless
  			end
 
  		else 
