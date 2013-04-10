@@ -64,23 +64,13 @@
  		elsif answer == "l"
 
  			# list all sentences present
- 			class Sentence 
- 				def initialise(name,content)
- 					@name = name
- 					@content = content
- 				end
-
- 				def name
- 					@name
- 				end
- 				
- 				def content
- 					@content
- 				end
- 			end
+ 			new_sentence = SentencePersistence.new()
+ 			
+ 			puts ("#{new_sentence}")
 
  			# or tell user if there are none
- 			unless
+ 			unless new_sentence = nil
+ 				abort("There are no sentences to print!")
  			end
 
  		else 
